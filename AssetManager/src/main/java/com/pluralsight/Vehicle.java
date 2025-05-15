@@ -47,7 +47,7 @@ public class Vehicle extends Asset {
             depreciatedValue = depreciatedValue - 1000.00;
         }
 
-        boolean isReliable = this.makeModel.contains("Honda") || this.makeModel.contains("Toyota");
+        boolean isReliable = this.makeModel.toLowerCase().contains("honda") || this.makeModel.toLowerCase().contains("toyota");
         if(this.odometer > 100000 && !isReliable) {
             depreciatedValue -= depreciatedValue * 0.25;
         }
